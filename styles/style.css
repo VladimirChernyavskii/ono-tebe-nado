@@ -274,8 +274,8 @@ text-transform: uppercase;
   grid-template-rows: 256px 143px 158px;
   grid-template-areas:
     "logo title"
-    ". text_first"
-    ". text_second";
+    ". text"
+    ". text";
 }
 
 .about__logo {
@@ -308,23 +308,23 @@ text-transform: uppercase;
 }
 
 .about__text {
+    grid-area: text;
   color: #000;
   font-family: Raleway, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.2; /* 120% */
+  letter-spacing: 0.04px;
 }
 
-.about__text_first {
-  grid-area: text_first;
-  letter-spacing: 0.05px;
-}
+.about__text:first-of-type {
+    grid-row: 2;
+  }
 
-.about__text_second {
-  grid-area: text_second;
-  letter-spacing: 0.03px;
-}
+.about__text:last-of-type {
+    grid-row: 3;
+  }
 
 .footer {
   display: flex;
